@@ -8,11 +8,12 @@ const ports = {
 
   "helper-date": 8080,
   "helper-links": 8081,
+  "helper-cleaner": 8082,
 
   scanner: 8090,
   calculator: 8091,
   librarian: 8092,
-  editor: 8093
+  editor: 8093,
 };
 
 module.exports = ports;

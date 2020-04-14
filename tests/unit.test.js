@@ -12,8 +12,8 @@ const { body } = require("./data");
 const defaultTimeout = 60 * 1000;
 
 describe("TEST: .... ||", () => {
-  it("gets the clean content right", async () => {
-    const response = await commander(body);
-    expect(response).to.be.a("string");
-  });
+  // it("gets the clean content right", async () => {
+  //   const response = await commander(body);
+  //   expect(response).to.be.a("string");
+  // });
 });
