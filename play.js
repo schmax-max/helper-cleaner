@@ -1,7 +1,8 @@
-require('./config/connection')
+require("./config/connection");
 
-const {commander} = require('./svc')
-const {body} = require('./tests/data')
+const { commander } = require("./svc");
+const { body } = require("./tests/data");
 
-const res = commander(body)
-console.log({res})  
+commander(body).then((res) => {
+  console.log({ res });
+});
