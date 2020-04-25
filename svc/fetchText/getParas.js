@@ -1,7 +1,7 @@
 module.exports = getParas;
 
 function getParas(data, identifier_words = {}) {
-  console.log({ identifier_words });
+  // console.log({ identifier_words });
   let fragments = [];
   const textStartIndicatorsArray = ["<p", "<h"];
   const textStartIndicators = new RegExp(textStartIndicatorsArray.join("|"));
@@ -52,7 +52,7 @@ function getParas(data, identifier_words = {}) {
   }, []);
 
   paras.reverse();
-  console.log({ paras });
+  // console.log({ paras });
 
   return { paras, fragments };
 }

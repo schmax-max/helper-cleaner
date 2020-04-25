@@ -1,16 +1,26 @@
 const axios = require("axios");
 const unfluff = require("unfluff");
-module.exports = fetchText;
 const getCombined = require("./getCombined");
+
+module.exports = fetchText;
+
+const url = "https:/www.worldblu.com/summit2020";
+// "https://www.theguardian.com/environment/2015/jul/24/the-9-green-policies-killed-off-by-tory-government";
+
+// fetchText(url);
 
 function fetchText(url) {
   if (url[0] === "?") {
     url = url.split("?")[1];
   }
+  if (!url.includes("://")) {
+    url = url.replace(":/", "://");
+  }
+
   console.log("starting fetchText");
   // console.log({text_content})
-  return axios
-    .get(url)
+  console.log({ url });
+  return axios({ method: "get", url })
     .then(({ data }) => {
       try {
         const identifier_words = getIdentifierWords(data);

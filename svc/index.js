@@ -15,6 +15,7 @@ async function master(req) {
 }
 
 async function commander({ url }) {
+  // console.log({ url });
   // console.log(`starting helper-date for ${url}`)
   try {
     return await fetchText(url);
